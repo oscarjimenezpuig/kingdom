@@ -2,7 +2,7 @@
 ============================================================
   Fichero: inout.c
   Creado: 22-10-2025
-  Ultima Modificacion: dimecres, 22 d’octubre de 2025, 20:46:10
+  Ultima Modificacion: mié 22 oct 2025 10:30:01
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -46,11 +46,5 @@ char* concatenate(char* d,const char* s,...) {
 	vsprintf(d,s,list);
 	va_end(list);
 	return d;
-}
-
-int strtonum(char* str) {
-	int val=0;
-	sscanf(str,"%i",&val);
-	return val;
 }
 	
