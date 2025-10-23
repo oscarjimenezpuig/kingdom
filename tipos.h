@@ -2,7 +2,7 @@
 ============================================================
   Fichero: tipos.h
   Creado: 22-10-2025
-  Ultima Modificacion: mié 22 oct 2025 11:28:43
+  Ultima Modificacion: dimecres, 22 d’octubre de 2025, 18:49:47
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -21,6 +21,7 @@ typedef signed int s4;
 
 typedef struct {
 	char name[CNL];
+	u1 jugador;
 	u2 areas;
 	u2 population;
 	u2 grain;

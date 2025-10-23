@@ -82,6 +82,6 @@ check:
 #MAKEFILE VARIABLE
 
 NAME = simula 
-SCRS = inout.c utils.c paises.c simula.c
+SCRS = inout.c utils.c paises.c batalla.c jugador.c turno.c simula.c
 INCLUDES = #-lX11
 
