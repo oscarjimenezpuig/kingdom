@@ -2,7 +2,7 @@
 ============================================================
   Fichero: constantes.h
   Creado: 22-10-2025
-  Ultima Modificacion: mié 22 oct 2025 12:07:30
+  Ultima Modificacion: dimecres, 22 d’octubre de 2025, 20:40:28
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -26,5 +26,11 @@
 #define HNP 3 //habitantes necesarios por area para producir el maximo de grano
 #define PMH 50 //probabilidad (en %) de muerte por hambre
 #define PMN 25 //probabilidad de muerte natural (en %)
+			   
+#define AGB 1 //areas ganadas en batalla
+#define GES 5 //granjeros que equivalen a un soldado
+
+#define MIS 3 //unidades de grano minima que cuesta un soldado
+#define MAS 9 //unidades de grano maxima que cuesta un soldado
 			  
 #endif 

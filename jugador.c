@@ -2,7 +2,7 @@
 ============================================================
   Fichero: jugador.c
   Creado: 22-10-2025
-  Ultima Modificacion: dijous, 23 d’octubre de 2025, 05:23:55
+  Ultima Modificacion: jue 23 oct 2025 11:02:21
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -12,7 +12,7 @@
 void jugador_accion(u2 id,u2 cs) {
 	char str[100];
 	Country* c=country+id;
-	if(c->grain>=cs && c->population-c->soldiers>0) {
+	if(c->grain>=cs && c->farmers>0) {
 buy:
 		print(0,"How many soldiers do you want to buy? ",0);
 		char inp[10];
@@ -44,7 +44,7 @@ buy:
 			print(0,"Do you want to attack any country?",1);
 			print(0,"These are your options: ",1);
 			print(1,"0. No",1);
-			for(u1 n=0;n<NPT;n++) {
+			for(u1 n=0;n<cas;n++) {
 				concatenate(str,"%i. %s",n+1,(country+ca[n])->name);
 				print(1,str,1);
 			}
@@ -55,7 +55,7 @@ try:
 			u1 nopt=strtonum(opt);
 			if(nopt>cas) goto try;
 			if(nopt>0) {
-				batalla_de_jugador(id,ca[nopt]);
+				batalla_de_jugador(id,ca[nopt-1]);
 				goto end;
 			}
 		}

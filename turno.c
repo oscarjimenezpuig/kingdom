@@ -2,7 +2,7 @@
 ============================================================
   Fichero: turno.c
   Creado: 22-10-2025
-  Ultima Modificacion: dijous, 23 d’octubre de 2025, 05:30:25
+  Ultima Modificacion: jue 23 oct 2025 10:48:45
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */

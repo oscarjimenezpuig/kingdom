@@ -2,7 +2,7 @@
 ============================================================
   Fichero: batalla.h
   Creado: 22-10-2025
-  Ultima Modificacion: dijous, 23 d’octubre de 2025, 05:00:43
+  Ultima Modificacion: jue 23 oct 2025 10:56:32
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -12,7 +12,7 @@
 
 #include "paises.h"
 
-int batalla(u1 id_atacante,u1 id_defensor);
+int batalla(u2 id_atacante,u2 id_defensor);
 //batalla entre atacante y defensor. Si el atacante gana se lleva un area del
 //rival.
 //Una batalla se hara entre cada soldado del pais atacante contra un soldado o el equivalente
@@ -23,16 +23,16 @@ int batalla(u1 id_atacante,u1 id_defensor);
 //hay empate.
 //Un pais no puede atacar si no tiene soldados.
 
-u2 atacante_gana(u1 id_atacante,u1 id_defensor);
+u2 atacante_gana(u2 id_atacante,u2 id_defensor);
 //si el atacante gana la batalla se lleve un area. El defensor pierde el area y la 
 //parte proporcional de habitantes correspondientes ha dicha area (eso es lo que retorna 
 //la funcion
 
-void batalla_de_jugador(u1 jugador_ataca,u1 defensor);
+void batalla_de_jugador(u2 jugador_ataca,u2 defensor);
 
-void batalla_contra_jugador(u1 atacante,u1 jugador_defensor);
+void batalla_contra_jugador(u2 atacante,u2 jugador_defensor);
 
-void batalla_entre_no_jugadores(u1 atacante,u1 defensor);
+void batalla_entre_no_jugadores(u2 atacante,u2 defensor);
 
 
 #endif 
