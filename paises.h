@@ -2,7 +2,7 @@
 ============================================================
   Fichero: paises.h
   Creado: 22-10-2025
-  Ultima Modificacion: dijous, 23 d’octubre de 2025, 05:06:33
+  Ultima Modificacion: dijous, 23 d’octubre de 2025, 18:59:17
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -53,7 +53,11 @@ int pais_compra_soldados(u1 id,u2 soldados,u2 precio);
 u1 pais_vivo(u1 id);
 //nos dice si un pais es vivo (tiene superficie o poblacion)
 
-void pais_print(u1 id);
-//imprimir caracteristicas del pais
+void pais_principio_ano(u1 id);
+//imprimir caracteristicas del pais antes de todos los cambios del año
+
+void pais_final_ano(u1 id);
+//imnprimir todas las caracteristicas despues de los cambios del año
+
 
 #endif

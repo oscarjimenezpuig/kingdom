@@ -2,7 +2,7 @@
 ============================================================
   Fichero: turno.c
   Creado: 22-10-2025
-  Ultima Modificacion: jue 23 oct 2025 10:48:45
+  Ultima Modificacion: dijous, 23 d’octubre de 2025, 19:07:31
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -19,10 +19,10 @@ void transcurre_turno(u2 turno,u2* coste) {
 	u2 migracion_total=0;
 	for(u1 i=0;i<NPT;i++) {
 		ij=country[i].jugador;
-		idjug=i;
 		if(ij) {
+			idjug=i;
 			print(0,"In the begining of the year, your country: ",1);
-			pais_print(i);
+			pais_principio_ano(i);
 		}
 		int pp=pais_produccion(i);
 		if(ij) {
@@ -62,6 +62,7 @@ void transcurre_turno(u2 turno,u2* coste) {
 			}
 		}
 	}
+	pais_final_ano(idjug);
 	concatenate(str,"This year, the price for train a soldier is %i tons of grain",*coste);
 	print(0,str,1);
 }

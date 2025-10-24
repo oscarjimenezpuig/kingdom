@@ -2,7 +2,7 @@
 ============================================================
   Fichero: paises.c
   Creado: 22-10-2025
-  Ultima Modificacion: jue 23 oct 2025 10:42:19
+  Ultima Modificacion: dijous, 23 d’octubre de 2025, 19:17:35
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -96,6 +96,7 @@ int pais_consumo(u1 id) {
 
 int pais_crecimiento(u1 id) {
 	Country* c=country+id;
+	u1 ij=c->jugador;
 	u2 muerte_soldados=0;
 	for(u2 n=0;n<c->soldiers;n++) {
 		if(DADO<PMN) muerte_soldados++;
@@ -113,6 +114,11 @@ int pais_crecimiento(u1 id) {
 		nacimientos+=rnd(0,MHP);
 	}
 	c->farmers+=nacimientos;
+	if(ij) {
+		char str[100];
+		concatenate(str,"In your country die %i farmers and %i soldiers. Born %i new habitants.",muerte_granjeros,muerte_soldados,nacimientos);
+		print(0,str,1);
+	}
 	int crecimiento=(int)nacimientos-(int)muertes;
 	return crecimiento;
 }
@@ -185,13 +191,19 @@ u1 pais_vivo(u1 id) {
 	return (c->areas!=0);
 }
 
-void pais_print(u1 id) {
+void pais_principio_ano(u1 id) {
 	Country* c=country+id;
 	printf("%s\n",c->name);
 	printf("The surface of the country is %i areas.\n",c->areas);
 	printf("The country have in their granarys %i tons of grain.\n",c->grain);
 	u2 population=c->farmers+c->soldiers;
 	printf("The population of the country is %i habitants. %i of them are farmers and %i soldiers.\n",population,c->farmers,c->soldiers);
+}
+
+void pais_final_ano(u1 id) {
+	Country* c=country+id;
+	printf("So now, you have %i areas, %i tons of grain.\n",c->areas,c->grain);
+	printf("Your population is %i habitants, %i farmers and %i soldiers.\n",c->farmers+c->soldiers,c->farmers,c->soldiers);
 }
 
 	

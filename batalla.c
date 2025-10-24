@@ -2,7 +2,7 @@
 ============================================================
   Fichero: batalla.c
   Creado: 22-10-2025
-  Ultima Modificacion: jue 23 oct 2025 11:05:43
+  Ultima Modificacion: dijous, 23 d’octubre de 2025, 19:14:32
   oSCAR jIMENEZ pUIG                                       
 ============================================================
 */
@@ -58,7 +58,6 @@ u2 atacante_gana(u2 a,u2 d) {
 }
 
 void batalla_de_jugador(u2 a,u2 d) {
-	printf("id a=%i id d=%i\n",a,d);//dbg
 	char str[100];
 	Country* ca=country+a;
 	Country* cd=country+d;
@@ -76,7 +75,7 @@ void batalla_de_jugador(u2 a,u2 d) {
 	print(0,str,1);
 	concatenate(str,"%s lose %i soldiers and %i farmers in this battle",cd->name,sd-cd->soldiers,gd-cd->farmers);
 	print(0,str,1);
-	if(rb) {
+	if(rb>0) {
 		u2 pp=atacante_gana(a,d);
 		concatenate(0,"You win %i area from %s. They loose %i inmates because of this",AGB,cd->name,pp);
 		print(0,str,1);
